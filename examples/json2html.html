@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+	<title> json2html examples </title>
+	<style>
+		th,td {
+			border: 1px solid rgb(153, 153, 153);
+		}
+	</style>
+	<!-- Add JSON2HTML -->
+	<script type="text/javascript" src="../json2html.js"></script>
+	
+ </head>
+ <body>
+ 	<div id="t"></div>
+ 	<div id="u"></div>
+	<script>
+	(function() {
+		var movies = [
+			{ "Name": "The Red Violin", "ReleaseYear": "1998" },
+			{ "Name": "The blue Violin", "ReleaseYear": "1998" },
+			{ "Name": "The yellow Violin", "ReleaseYear": "1998" },
+			{ "Name": "The purple Violin", "ReleaseYear": "1998" },
+			{ "Name": "The orange Violin", "ReleaseYear": "1998" }
+		];
+		var html = JSON2HTML.table(movies);
+		var html2 = JSON2HTML.ul(movies);
+		document.getElementById("t").innerHTML=html;
+		document.getElementById("u").innerHTML=html2;
+		
+	})();
+	</script>
+ </body>
+</html>
